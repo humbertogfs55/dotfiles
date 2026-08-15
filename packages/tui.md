@@ -1,0 +1,4 @@
+omatunes
+lazygit
+lazydocker
+kew

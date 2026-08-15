@@ -1,0 +1,181 @@
+# ============================================================
+# GHOSTTY — MEGA BLASTER CONFIG
+# ============================================================
+
+# ------------------------------------------------------------
+# OMARCHY DYNAMIC THEME
+# ------------------------------------------------------------
+
+config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"
+
+
+# ------------------------------------------------------------
+# FONT
+# ------------------------------------------------------------
+
+font-family = "JetBrainsMono Nerd Font"
+font-style = Regular
+font-size = 9
+
+# Ligatures
+font-feature = "liga"
+font-feature = "calt"
+
+# Slightly heavier rendering
+font-thicken = true
+
+
+# ------------------------------------------------------------
+# WINDOW
+# ------------------------------------------------------------
+
+window-theme = ghostty
+
+window-padding-x = 14
+window-padding-y = 14
+
+confirm-close-surface = false
+resize-overlay = never
+gtk-toolbar-style = flat
+
+# Don't waste space on decorations
+window-decoration = false
+
+# Transparency
+background-opacity = 0.96
+background-blur-radius = 20
+
+# Keep terminal from becoming absurdly narrow
+minimum-contrast = 1.0
+
+
+# ------------------------------------------------------------
+# CURSOR
+# ------------------------------------------------------------
+
+cursor-style = block
+cursor-style-blink = false
+
+# Cursor color follows theme
+cursor-opacity = 1
+
+
+# ------------------------------------------------------------
+# SHELL INTEGRATION
+# ------------------------------------------------------------
+
+# Cursor + SSH environment integration
+shell-integration-features = no-cursor,ssh-env
+
+# Automatically detect shell
+shell-integration = detect
+
+# ------------------------------------------------------------
+# SCROLLBACK
+# ------------------------------------------------------------
+
+scrollback-limit = 100000
+
+# Mouse wheel
+mouse-scroll-multiplier = 0.95
+
+# Don't jump around while output is happening
+scroll-to-bottom = true
+
+
+# ------------------------------------------------------------
+# CLIPBOARD
+# ------------------------------------------------------------
+
+copy-on-select = false
+clipboard-read = allow
+clipboard-write = allow
+
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+
+# Modern copy/paste
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+
+# ------------------------------------------------------------
+# MOUSE
+# ------------------------------------------------------------
+
+# Don't steal Ctrl+click from applications
+mouse-hide-while-typing = true
+
+# URL clicking
+link-previews = true
+
+# ------------------------------------------------------------
+# TERMINAL BEHAVIOR
+# ------------------------------------------------------------
+
+# Don't beep
+bell-features = no-audio
+
+# Keep output responsive
+async-backend = epoll
+
+
+# ------------------------------------------------------------
+# PERFORMANCE
+# ------------------------------------------------------------
+
+# GPU renderer
+gtk-single-instance = true
+
+# Disable unnecessary animation
+window-inherit-working-directory = true
+
+
+# ------------------------------------------------------------
+# TITLE
+# ------------------------------------------------------------
+
+# Let shell/application control title
+title = "Ghostty"
+
+# Don't constantly rewrite title from shell
+title = "Ghostty"
+
+
+# ------------------------------------------------------------
+# KEYBOARD
+# ------------------------------------------------------------
+
+# Reload configuration
+keybind = ctrl+shift+comma=reload_config
+
+# Clear screen
+keybind = ctrl+l=clear_screen
+
+# Reset terminal
+keybind = ctrl+shift+r=reset
+
+
+# ------------------------------------------------------------
+# QUICK TERMINAL / WINDOW
+# ------------------------------------------------------------
+
+# Fullscreen
+keybind = super+shift+f=toggle_fullscreen
+
+# Maximize
+keybind = super+shift+m=toggle_maximize
+
+
+# ------------------------------------------------------------
+# VISUAL POLISH
+# ------------------------------------------------------------
+
+# Slight transparency rather than completely opaque
+background-opacity = 0.96
+
+# Keep text crisp
+adjust-cursor-thickness = 1
+
+# Don't use an ugly resize overlay
+resize-overlay = never
