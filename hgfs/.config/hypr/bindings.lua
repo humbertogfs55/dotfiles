@@ -57,3 +57,19 @@ o.bind("SUPER + CTRL + 8", "Toggle dictation language (en/pt)", "~/.config/hypr/
 -- Unbind SUPER+CTRL+S (was: Share)
 hl.unbind("SUPER + CTRL + S")
 o.bind("SUPER + CTRL + S", "Toggle screen recording", "omarchy-capture-screenrecording")
+
+--UNBIND CTRL + SHIFT + TAB 
+hl.unbind("CTRL + SHIFT + TAB")
+o.bind(
+  "CTRL + SHIFT + TAB",
+  "Workspace overview",
+  "omarchy-shell shell summon mirador '{}'"
+)
+
+--UNBIND SUPER + SHIFT + E for new email
+hl.unbind("SUPER + SHIFT + E")
+o.bind(
+  "SUPER + SHIFT + E",
+  "Proton mail",
+  "gtk-launch Email"
+)

@@ -30,3 +30,17 @@ require("default.hypr.toggles")
 
 -- Steam's main window tiles fine; override Omarchy's default float.
 o.window("steam", { float = false })
+
+-- Dota 2 runs borderless at a resolution smaller than the monitor; keep it
+-- floating and strip every Hyprland effect so nothing tiles, animates,
+-- blurs, dims, or shows through it.
+o.window("dota2", {
+  float = true,
+  decorate = false,
+  no_anim = true,
+  no_blur = true,
+  no_shadow = true,
+  no_dim = true,
+  opaque = true,
+  rounding = 0,
+})
