@@ -24,7 +24,7 @@ o.bind("SUPER + SPACE", "App menu", "omarchy-menu toggle apps")
 
 hl.unbind("SUPER + W")
 hl.unbind("SUPER + Q")
-o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
+o.bind("SUPER + Q", "Kill window", hl.dsp.window.kill())
 
 -- Remove preinstalled Google webapp bindings.
 hl.unbind("SUPER + SHIFT + CTRL + G")
@@ -56,7 +56,7 @@ o.bind("SUPER + CTRL + 8", "Toggle dictation language (en/pt)", "~/.config/hypr/
 
 -- Unbind SUPER+CTRL+S (was: Share)
 hl.unbind("SUPER + CTRL + S")
-o.bind("SUPER + CTRL + S", "Toggle screen recording", "omarchy-capture-screenrecording")
+o.bind("SUPER + CTRL + S", "Toggle screen recording (with desktop audio)", "omarchy-capture-screenrecording --with-desktop-audio")
 
 --UNBIND CTRL + SHIFT + TAB 
 hl.unbind("CTRL + SHIFT + TAB")

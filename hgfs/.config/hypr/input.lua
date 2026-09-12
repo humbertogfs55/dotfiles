@@ -48,6 +48,7 @@
 hl.config({
   input = {
     accel_profile = "flat",
+    sensitivity = 0,
 
     -- Restore normal Caps Lock behavior (Omarchy's default makes Caps Lock
     -- a compose key and moves caps-lock toggling to both Shift keys).

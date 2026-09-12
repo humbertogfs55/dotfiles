@@ -31,6 +31,9 @@ require("default.hypr.toggles")
 -- Steam's main window tiles fine; override Omarchy's default float.
 o.window("steam", { float = false })
 
+-- Zen Browser: full opacity, no transparency.
+o.window("zen", { tag = "-default-opacity", opacity = "1 1" })
+
 -- Dota 2 runs borderless at a resolution smaller than the monitor; keep it
 -- floating and strip every Hyprland effect so nothing tiles, animates,
 -- blurs, dims, or shows through it.
@@ -43,4 +46,5 @@ o.window("dota2", {
   no_dim = true,
   opaque = true,
   rounding = 0,
+  immediate = true,
 })

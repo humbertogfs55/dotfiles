@@ -26,29 +26,29 @@
 -- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
-hl.config({
-    general = {
-        -- Master toggle required for any `immediate` window rule to tear.
-        allow_tearing = true,
-    },
-
-    misc = {
-        vrr = 0,
-    },
-})
-
+-- hl.config({
+--   animations = {
+--     -- Disable all animations.
+--     enabled = false,
 --   },
 -- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#misc
--- VRR stays off entirely (Hyprland's default, misc.vrr = 0). Tried it for
--- Dota 2's camera-pan jitter: vrr=1 (always on) forces software cursors on
--- the desktop (hyprctl monitors -> hardwareCursorsInUse: false), so the
--- pointer gets redrawn at a variable, often low, refresh rate instead of
--- riding the display's cursor plane -- floaty/laggy no matter what
--- accel_profile is set to. vrr=2 (fullscreen-only) keeps the desktop cursor
--- hardware-accelerated but still felt bad in Dota 2 itself. Not worth it
--- either way -- always use the hardware cursor.
+-- Enable VRR (adaptive sync) for fullscreen apps only. Fixes camera-pan jitter
+-- in Dota 2 and other games: without it, an uncapped/variable framerate gets
+-- forced into a rigid 240Hz refresh by the compositor, causing frame-pacing
+-- stutter.
+--
+-- Must stay 2, not 1. With VRR always on, Hyprland falls back to software
+-- cursors (hyprctl monitors -> hardwareCursorsInUse: false) and the pointer is
+-- redrawn at the desktop's variable, often low, refresh rate instead of riding
+-- the display's cursor plane. That reads as a floaty/laggy mouse no amount of
+-- accel_profile = "flat" can fix.
+hl.config({
+  misc = {
+    vrr = 2,
+  },
+})
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#layout
 -- hl.config({
@@ -65,4 +65,3 @@ hl.config({
 --     column_width = 0.97,
 --   },
 -- })
-
