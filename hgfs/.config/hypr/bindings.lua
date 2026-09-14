@@ -24,7 +24,7 @@ o.bind("SUPER + SPACE", "App menu", "omarchy-menu toggle apps")
 
 hl.unbind("SUPER + W")
 hl.unbind("SUPER + Q")
-o.bind("SUPER + Q", "Kill window", hl.dsp.window.kill())
+o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
 
 -- Remove preinstalled Google webapp bindings.
 hl.unbind("SUPER + SHIFT + CTRL + G")
